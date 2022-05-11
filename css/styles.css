@@ -32,6 +32,7 @@ html {
 
 
 
+
   --fs-xl: 15px;
   --fs-xs: 13px;
 
@@ -120,6 +121,14 @@ img {
   padding: 8px 11px;
   width: 40px;
 }
+.upvote_btn:hover {
+  background: #CFD7FF;
+}
+.upvote_btn:active {
+  color: var(--clr-white);
+  background: var(--clr-primary);
+}
+
 .upvote_btn i {
   font-size: 8px;
   margin-right: 8px;
