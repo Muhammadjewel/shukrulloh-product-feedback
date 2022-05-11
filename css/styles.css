@@ -1,4 +1,7 @@
 /* GLOBAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,500;0,600;1,700&display=swap');
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -48,6 +51,10 @@ body    {
   font-weight: 100;
   
 }
+a {
+  text-decoration: none;
+  font-weight: var(--fw-xl);
+}
 
 img {
   max-width: 100%;
@@ -59,6 +66,7 @@ img {
   border: none;
   color: var(--clr-white);
   background: var(--clr-pink);
+  font-weight: var(--fw-xl);
 }
 .btn:hover {
   background: var(--clr-lightpink);
@@ -82,9 +90,54 @@ img {
   background: var(--clr-lightblue);
 }
 
-@media only screen and(min-width: 640px) {
+.back_btn {
+  color: var(--clr-dark);
+  font-weight: var(--fw-xl);
+}
+.back_btn:hover {
+  text-decoration-color: var(--clr-dark);
+  text-decoration: underline;
+}
+.back_btn i {
+  color: var(--clr-primary);
+  margin-right: 15px;
+}
+.back_btn-white {
+  color: var(--clr-white);
+}
+.back_btn-white:hover {
+  text-decoration-color: var(--clr-white);
+  text-decoration: underline;
+}
+.back_btn-white i {
+  color: var(--clr-white);
+  margin-right: 15px;
+}
+.upvote_btn {
+  background: var(--clr-white);
+  border-radius: 10px;
+  color: var(--clr-dark);
+  padding: 8px 11px;
+  width: 40px;
+}
+.upvote_btn i {
+  font-size: 8px;
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 640px) {
   .btn {
     padding: 12.5px 24px;
+  }
+  .upvote_btn {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6px;
+    margin-right: 30px;
+  }
+  .upvote_btn i {
+    font-size: 8px;
+    margin: auto;
   }
 }
   
