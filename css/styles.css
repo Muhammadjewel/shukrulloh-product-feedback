@@ -133,8 +133,24 @@ img {
   font-size: 8px;
   margin-right: 8px;
 }
+.tag_btn {
+  border-radius: 10px;
+  border: none;
+  background: var(--clr-gray);
+  color: var(--clr-primary);
+  padding: 5px 16px;
+  margin: 14px auto auto 8px;
+}
+.tag_btn:hover {
+  background: #CFD7FF;
+}
+.tag_btn:active {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
 .card {
   padding: 24px;
+  border-radius: 10px;
   background: var(--clr-white);
 }
 .edit_create-card {
