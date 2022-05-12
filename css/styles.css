@@ -22,16 +22,12 @@ html {
   --clr-darkblue: #373F68;
   --clr-lightblue: #62BCFA;
   --clr-orange: #F49F85;
-  --clr-active_btn : #4661E6;
+  --clr-active--btn : #4661E6;
   --clr-danger : #D73737;
   --clr-lightdanger : #E98888;
 
-
-
-
   --fs-xl: 15px;
   --fs-xs: 13px;
-
 
   --fw-xl: 700;
   --fw-lg: 600;
@@ -48,12 +44,14 @@ body    {
   font-weight: 100;
   
 }
-
 img {
   max-width: 100%;
   height: auto;
 }
+
+
 .btn {
+  display: inline;
   padding: 10.5px 17px;
   border-radius: 10px;
   border: none;
@@ -63,22 +61,22 @@ img {
 .btn:hover {
   background: var(--clr-lightpink);
 }
-.cancel_btn {
+.btn--cancel {
   background: var(--clr-dark);
 }
-.cancel_btn:hover {
+.btn--cancel:hover {
   background: var(--clr-darkblue);
 }
-.danger_btn {
+.btn--danger {
   background: var(--clr-danger);
 }
-.danger_btn:hover {
+.btn--danger:hover {
   background: var(--clr-lightdanger);
 }
-.primary_btn {
+.btn--primary {
   background: var(--clr-primary);
 }
-.primary_btn:hover {
+.btn--primary:hover {
   background: var(--clr-lightblue);
 }
 
@@ -133,9 +131,7 @@ select:-webkit-autofill:focus {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1150px;
   margin-left: auto;
   margin-right: auto;
 }
