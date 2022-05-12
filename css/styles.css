@@ -11,6 +11,30 @@ html {
   box-sizing: inherit;
 }
 
+:root {
+  --clr-white: #FFFFFF;
+  --clr-primary: #4661E6;
+  --clr-dark: #3A4374;
+  --clr-gray: #F2F2F2;
+  --clr-light: #647196;
+  --clr-pink: #AD1FEA;
+  --clr-lightpink : #C75AF6;
+  --clr-darkblue: #373F68;
+  --clr-lightblue: #62BCFA;
+  --clr-orange: #F49F85;
+  --clr-active--btn : #4661E6;
+  --clr-danger : #D73737;
+  --clr-lightdanger : #E98888;
+
+  --fs-xl: 15px;
+  --fs-xs: 13px;
+
+  --fw-xl: 700;
+  --fw-lg: 600;
+  --fw-xs: 300;
+}
+
+
 body {
   display: flex;
   flex-direction: column;
@@ -29,6 +53,29 @@ img {
   height: auto;
 }
 
+.card {
+  padding: 24px;
+  border-radius: 10px;
+  background-color: var(--clr-white);
+}
+.card--raoadmap-widget {
+  padding-top: 20px;
+}
+.card--narrow--top {
+  padding-top: 44px;
+}
+.roadmap--card {
+  padding-top: 16px;
+}
+@media screen and (min-width: 760px){
+  .card--tablet {
+    padding: 32px 28px;
+  }
+  .card--narrow--top {
+    padding-top: 52px 42px;
+  }
+}
+  
 
 /* AUTOFILL-STYLES */
 /*input:-webkit-autofill,
