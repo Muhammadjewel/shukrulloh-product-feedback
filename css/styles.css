@@ -29,6 +29,22 @@ img {
   height: auto;
 }
 
+.btn--tag {
+  border-radius: 10px;
+  border: none;
+  background: var(--clr-gray);
+  color: var(--clr-primary);
+  padding: 5px 16px;
+  margin: 14px auto auto 8px;
+}
+.btn--tag:hover {
+  background: #CFD7FF;
+}
+.btn--tag:active {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
+
 
 /* AUTOFILL-STYLES */
 /*input:-webkit-autofill,
