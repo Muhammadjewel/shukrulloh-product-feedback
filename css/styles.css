@@ -61,17 +61,17 @@ img {
 .card--raoadmap-widget {
   padding-top: 20px;
 }
-.card--narrow--top {
+.card--narrow-top {
   padding-top: 44px;
 }
-.roadmap--card {
+.roadmap-card {
   padding-top: 16px;
 }
 @media screen and (min-width: 760px){
   .card--tablet {
     padding: 32px 28px;
   }
-  .card--narrow--top {
+  .card--narrow-top {
     padding-top: 52px 42px;
   }
 }
