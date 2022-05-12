@@ -30,6 +30,31 @@ img {
 }
 
 
+.btn--back {
+  color: var(--clr-dark);
+  font-weight: var(--fw-xl);
+}
+.btn--back:hover {
+  text-decoration-color: var(--clr-dark);
+  text-decoration: underline;
+}
+.back--icon {
+  color: var(--clr-primary);
+  margin-right: 15px;
+}
+.back--btn--white {
+  color: var(--clr-white);
+}
+.back--btn--white:hover {
+  text-decoration-color: var(--clr-white);
+  text-decoration: underline;
+}
+.back--white--icon {
+  color: var(--clr-white);
+  margin-right: 15px;
+}
+
+
 /* AUTOFILL-STYLES */
 /*input:-webkit-autofill,
 input:-webkit-autofill:hover,
