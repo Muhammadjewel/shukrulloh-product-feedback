@@ -28,7 +28,25 @@ img {
   max-width: 100%;
   height: auto;
 }
+.btn--upvote {
+  background: var(--clr-white);
+  border-radius: 10px;
+  color: var(--clr-dark);
+  padding: 8px 11px;
+  width: 40px;
+}
+.btn--upvote:hover {
+  background: #CFD7FF;
+}
+.btn--upvote:active {
+  color: var(--clr-white);
+  background: var(--clr-primary);
+}
 
+.upvote--icon {
+  font-size: 8px;
+  margin-right: 8px;
+}
 
 /* AUTOFILL-STYLES */
 /*input:-webkit-autofill,
