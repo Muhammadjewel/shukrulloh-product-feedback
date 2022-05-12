@@ -133,7 +133,13 @@ img {
   font-size: 8px;
   margin-right: 8px;
 }
-
+.card {
+  padding: 24px;
+  background: var(--clr-white);
+}
+.edit_create-card {
+  padding-top: 44px;
+}
 @media screen and (min-width: 640px) {
   .btn {
     padding: 12.5px 24px;
@@ -148,6 +154,19 @@ img {
     font-size: 8px;
     margin: auto;
     margin-bottom: 5px;
+  }
+  .edit_create-card {
+    padding: 52px 42px 40px 42px;
+    background-color: #373F68;
+  }
+  .nav_card {
+    padding: 24px;
+  }
+  .card {
+    padding: 28px 32px ;
+  }
+  .roadmap_card {
+    padding: 20px 24px;
   }
 }
   
