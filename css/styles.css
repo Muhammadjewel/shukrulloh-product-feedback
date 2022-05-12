@@ -42,10 +42,10 @@ img {
   color: var(--clr-primary);
   margin-right: 15px;
 }
-.back--btn--white {
+.btn--back--white {
   color: var(--clr-white);
 }
-.back--btn--white:hover {
+.btn--back--white:hover {
   text-decoration-color: var(--clr-white);
   text-decoration: underline;
 }
