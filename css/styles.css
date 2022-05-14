@@ -35,19 +35,36 @@ html {
 }
 
 
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: #333;
-  color: #222;
+body    {
+  font-family: 'Jost', sans-serif;
+  color: var(--clr-white);
+  background: var(--clr-gray);
+  line-height: 18.79px;
+  font-size: var(--fs-xs);
+  font-weight: 100;
+  
 }
-
+p {
+  font-size: 16px;
+  font-weight: var(--fw-xs);
+  line-height: 23px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: var(--clr-light);
+}
+a {
+  text-decoration: none;
+  font-weight: var(--fw-xl);
+  color: var(--clr-primary);
+}
+h3  {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.25px;
+  text-align: left;
+  color: var(--clr-dark);
+}
 img {
   max-width: 100%;
   height: auto;
@@ -58,7 +75,7 @@ img {
   background: var(--clr-gray);
   color: var(--clr-primary);
   padding: 5px 16px;
-  margin: 14px auto auto 8px;
+  margin: auto 8px 14px auto;
 }
 .btn--tag:hover {
   background: #CFD7FF;
@@ -72,14 +89,53 @@ img {
   border-radius: 10px;
   background-color: var(--clr-white);
 }
-.card--raoadmap-widget {
+.card--roadmap-widget {
   padding-top: 20px;
+  margin-top: 24px;
 }
 .card--narrow-top {
   padding-top: 44px;
 }
-.roadmap-card {
+.roadmap--card {
   padding-top: 16px;
+}
+.roadmap-widget__head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+} 
+.roadmap-widget__title {
+  margin: 0;
+}
+.roadmap-widget__link:hover {
+  text-decoration: underline;
+}
+.roadmap-widget__dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 16px;
+    background: var(--clr-orange);
+}
+.roadmap-widget__dot--pink{
+  background: var(--clr-pink);
+}
+.roadmap-widget__dot--lightblue {
+  background: var(--clr-lightblue);
+}
+.roadmap-widget__status {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.roadmap-widget__text {
+  margin: 0;
+}
+.roadmap-widget__number {
+  margin: 0 0 0 auto;
+  color: var(--clr-dark);
 }
 @media screen and (min-width: 760px){
   .card--tablet {
