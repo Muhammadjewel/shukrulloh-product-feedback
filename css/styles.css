@@ -134,8 +134,10 @@ img {
   margin: 0;
 }
 .roadmap-widget__number {
-  margin: 0 0 0 auto;
+  margin: 0;
+  margin-left: auto;
   color: var(--clr-dark);
+  font-weight: 700;
 }
 @media screen and (min-width: 760px){
   .card--tablet {
