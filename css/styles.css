@@ -1,3 +1,20 @@
+/* CUSTOM PROPS */
+:root {
+  --color-purple: #ad1fea;
+  --color-blue: #4661e6;
+  --color-light-blue: #62bcfa;
+  --color-orange: #f49f85;
+  --color-red: #d73737;
+  --color-white: #fff;
+
+  --color-body-bg: #f7f8fd;
+  --color-light-bg: #f2f4ff;
+  --color-text: #3a4374;
+
+  --font-family: "Jost", "Arial", sans-serif;
+}
+
+
 /* GLOBAL */
 html {
   box-sizing: border-box;
