@@ -9,7 +9,8 @@
 
   --color-body-bg: #f7f8fd;
   --color-light-bg: #f2f4ff;
-  --color-text: #3a4374;
+  --color-text: #647196;
+  --color-text-dark: #3a4374;
 
   --font-family: "Jost", "Arial", sans-serif;
 }
@@ -73,10 +74,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--font-family);
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #222;
+  font-size: 15px;
+  line-height: normal;
+  background-color: var(--color-body-bg);
+  color: var(--color-text);
 }
 
 img {
