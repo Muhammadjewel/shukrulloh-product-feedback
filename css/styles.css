@@ -44,7 +44,7 @@ body {
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #fff;
+  background-color: #333;
   color: #222;
 }
 
@@ -52,7 +52,21 @@ img {
   max-width: 100%;
   height: auto;
 }
-
+.btn--tag {
+  border-radius: 10px;
+  border: none;
+  background: var(--clr-gray);
+  color: var(--clr-primary);
+  padding: 5px 16px;
+  margin: 14px auto auto 8px;
+}
+.btn--tag:hover {
+  background: #CFD7FF;
+}
+.btn--tag:active {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
 .card {
   padding: 24px;
   border-radius: 10px;
