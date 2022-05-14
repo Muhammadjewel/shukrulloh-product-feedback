@@ -125,6 +125,20 @@ select:-webkit-autofill:focus {
 }
 
 
+/* PAGE */
+.page__body {
+  padding-top: 0;
+}
+
+.page__body--feedback-detail {
+  padding-top: 24px;
+}
+
+.page__body--feedback-form {
+  padding-top: 34px;
+}
+
+
 /* CONTAINER */
 .container {
   width: 100%;
@@ -149,4 +163,32 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
+}
+
+/* TODO Update media size */
+@media only screen and (min-width: 768px) {
+  .page__body,
+  .page__body--feedback-detail,
+  .page__body--feedback-form,
+  .page__body--roadmap {
+    padding-top: 56px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page__body {
+    padding-top: 94px;
+  }
+
+  .page__body--feedback-detail {
+    padding-top: 80px;
+  }
+
+  .page__body--feedback-form {
+    padding-top: 92px;
+  }
+
+  .page__body--roadmap {
+    padding-top: 78px;
+  }
 }
