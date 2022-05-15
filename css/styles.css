@@ -84,7 +84,33 @@ img {
   max-width: 100%;
   height: auto;
 }
+a {
+  text-decoration: none;
+  color: var(--clr-primary);
+}
 
+
+/* BACK BUTTON */
+.form-header__btn {
+  font-weight: 700;
+}
+.form-header__btn:hover {
+  text-decoration-color: var(--color-text);
+  text-decoration: underline;
+}
+.form-header__icon {
+  color: var(--color-blue);
+  margin-right: 15px;
+}
+.form-header__btn--white {
+  color: var(--color-white);
+}
+.form-header__btn--white:hover {
+  text-decoration-color: var(--color-white);
+}
+.form-header__icon--white {
+  color: var(--color-white);
+}
 
 /* AUTOFILL-STYLES */
 /*input:-webkit-autofill,
