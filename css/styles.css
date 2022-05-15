@@ -94,17 +94,17 @@ img {
   background: var(--clr-pink);
   font-weight: var(--fw-xl);
 }
-.btn--tag {
+.tag__btn {
   padding: 5px 16px;
   background-color: var(--color-light-bg);
   color: var(--color-blue);
   margin: 14px auto auto 8px;
 }
-.btn--tag:hover {
+.tag__btn:hover {
   background-color: #7c91f9;
   color: var(--color-white);
 }
-.btn--tag:active {
+.tag__btn:active {
   background-color: var(--color-blue);
   color: var(--color-white);
 }
