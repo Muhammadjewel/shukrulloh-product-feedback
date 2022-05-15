@@ -84,6 +84,52 @@ img {
   max-width: 100%;
   height: auto;
 }
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 10.5px 17px;
+  border-radius: 10px;
+  border: none;
+  color: var(--clr-white);
+  background: var(--clr-pink);
+  font-weight: 700;
+}
+.tag__btn {
+  padding: 5px 16px;
+  background-color: var(--color-light-bg);
+  color: var(--color-blue);
+  margin: 14px auto auto 8px;
+}
+.tag__btn:hover {
+  background-color: #7c91f9;
+  color: var(--color-white);
+}
+.tag__btn:active {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+.upvote__btn {
+  padding: 6px 13px;
+  background-color: var(--color-light-bg);
+  color: var(--color-text-dark);
+  margin: 0;
+}
+.upvote__icon {
+  color: var(--color-blue);
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .upvote__btn {
+    padding: 8px 11px;
+  }
+  .upvote__icon {
+    display: block;
+    margin: auto;
+    margin-bottom: 8px;
+  }
+}
+
 
 
 /* AUTOFILL-STYLES */
