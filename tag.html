@@ -9,10 +9,26 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .tag {
+      display: inline-block;
+      padding: 5px 16px 6px;
+      font-weight: 600;
+      background-color: var(--color-light-bg);
+      color: var(--color-blue);
+    }
+    .tag:hover {
+      background-color: #cfd7ff;
+    }
+    .tag--active {
+      background-color: var(--color-blue);
+      color: var(--color-white);
+    }
+  </style>
 </head>
 <body class="page__body">
 
-  
+  <button class="tag">Engancement</button>
 
   <script src="js/main.js"></script>
 </body>
