@@ -7,7 +7,7 @@
   --color-red: #d73737;
   --color-white: #fff;
   --color-lightpurple: #C75AF6;
-  
+
 
   --color-body-bg: #f7f8fd;
   --color-light-bg: #f2f4ff;
@@ -86,46 +86,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-
-/* BUTTONS */
-.btn {
-  display: inline-block;
-  padding: 10px 17px;
-  border: none;
-  border-radius: 10px;
-  background-color: var(--color-purple);
-  color: var(--color-white);
-  text-align: center;
-  cursor: pointer;
-}
-.btn:hover {
-  background-color: var(--color-lightpurple);
-}
-.btn--cancel {
-  background-color: var(--color-text-dark);
-}
-.btn--cancel:hover {
-  background-color: #656ea3;
-}
-.btn--red {
-  background-color: var(--color-red);
-}
-.btn--red:hover {
-  background-color: #e98888;
-}
-.btn--primary {
-  background-color: var(--color-blue);
-}
-.btn--primary:hover {
-  background-color: var(--color-light-blue);
-}
-@media only screen and(min-width: 640px) {
-  .btn {
-    padding: 12px 24px;
-  }
-}
-
 
 
 /* PLACEHOLDER-STYLES */
