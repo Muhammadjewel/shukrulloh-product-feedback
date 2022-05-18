@@ -10,9 +10,59 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
+
+  <style>
+    .roadmap-widget__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .roadmap-widget__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .roadmap-widget__term {
+      position: relative;
+      padding-left: 20px;
+    }
+    .roadmap-widget__term::before {
+      content: "";
+      position: absolute;
+      background-color: #F49F85;
+      width: 8px;
+      height: 8px;
+      top: 6px;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      border-radius: 50%;   
+    }
+    .roadmap-widget__number {
+      font-weight: 700;
+    }
+    .roadmap-widget__title {
+      color: var(--color-text-dark);
+    }
+    .roadmap-widget__link {
+      color: var(--color-text-blue);
+    }
+  </style>
 <body class="page__body page__body--roadmap">
 
-
+    <div class="container">
+      <div class="roadmap-widget card">
+        <div class="roadmap-widget__header">
+          <h3 class="roadmap-widget__title">Roadmap</h3>
+          <a class="roadmap-widget__link"href="roadmap.html">View</a>
+        </div>
+        <dl class="roadmap-widget__body">
+          <dt class="roadmap-widget__term">Planned</dt>
+          <dd class="roadmap-widget__number">124</dd>
+        </dl>
+      </div>
+    </div>
 
   <script src="js/main.js"></script>
 </body>
