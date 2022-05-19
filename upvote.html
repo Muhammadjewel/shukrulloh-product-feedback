@@ -12,34 +12,49 @@
   
 
   <style>
-    .upvote--btn {
-      display: inline-block;
-      padding: 6px 14px 6px;
+    .upvote-btn {
+      border: none;
+      border-radius: 10px;
       font-weight: 700;
       background-color: var(--color-light-bg);
       color: var(--color-text-dark);
-      border: none;
-      border-radius: 10px;
     }
-    .upvote--btn:hover {
+    .upvote-btn:hover {
       background-color: #cfd7ff;
     }
-    .upvote--btn--active {
+    .upvote-btn__inner {
+      display: flex;
+      align-items: center;
+      padding: 6px 14px;
+    }
+    .upvote-btn--active {
       background-color: var(--color-blue);
       color: var(--color-white);
     }
-    .upvote--icon {
-      margin-left: 10px;
-      margin-bottom: 2px;
+    .upvote-btn__icon {
+      margin-right: 10px;
+      color: var(--color-blue);
+    }
+    @media only screen and (min-width: 768px) {
+      .upvote-btn__inner {
+        flex-direction: column;
+      }
+      .upvote-btn__icon {
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
     }
   </style>
 <body class="page__body">
 
-        <button type="button" class="upvote--btn">
-            <img class="upvote--icon" src="img/up-icon.svg" alt="">
-            112
-        </button>
-    
+  <button class="upvote-btn" href="index.html">
+    <span class="upvote-btn__inner">
+      <svg class="upvote-btn__icon" width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 6L4 2L8 6" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      <span class="upvote-btn__text">112</span>
+    </span>
+  </button>
   <script src="js/main.js"></script>
 </body>
 </html>
