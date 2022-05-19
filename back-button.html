@@ -9,21 +9,46 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <style>
+      
+    .back--btn__text {
+        font-weight: 700;
+    }
+    .back--btn__inner:hover {
+        text-decoration: underline;
+    }
+    .back--btn__icon {
+        margin-right: 10px;
+    }
+    .back--btn__text--white {
+    color: var(--color-white);
+    }
+    .back--btn--white {
+        background-color: var(--color-text-dark);
+    }
+    .back--btn__inner--white:hover {
+        text-decoration-color: #ffffff;
+    }
+
+
+  </style>
 </head>
 <body class="page__body--feedback-form">
 
     <div class="from-header">
-        <a class="form-header__btn" href="index.html">
-            <span class="form-header__icon"><i class="fa-solid fa-chevron-left"></i></span>
-            Go back
+        <a class="back--btn" href="index.html">
+            <span class="back--btn__inner">
+                <img class="back--btn__icon" src="img/back-btn-icon.svg">
+                <span class="back--btn__text">Go back</span>
+            </span>
         </a>
-    </div>
-    <div class="from-header" style="background-color: black;">
-        <a class="form-header__btn form-header__btn--white" href="index.html">
-            <span class="form-header__icon form-header__icon--white"><i class="fa-solid fa-chevron-left"></i></span>
-            Go back
+        <a class="back--btn back--btn--white" href="index.html">
+            <span class="back--btn__inner back--btn__inner--white">
+                <img class="back--btn__icon" src="img/back-btn-icon-white.svg">
+                <span class="back--btn__text back--btn__text--white">Go back</span>
+            </span>
         </a>
+
     </div>
 
   <script src="js/main.js"></script>
