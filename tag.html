@@ -15,26 +15,30 @@
       border-radius: 10px;
       background-color: #fff;
     }
-    .card--narrow-top {
-      padding-top: 20px;
+    .taglist {
+      width: 225px;
+      list-style: none;
+      padding: 24px;
+      background-color: #fff;
+      box-sizing: border-box;
     }
-    .card--feedback-form {
-      padding-top: 44px;
-    }
-    .tag {
+    .taglist__item {
       display: inline-block;
-      padding: 5px 16px 6px;
+      margin-right: 3px;
+      margin-bottom: 20px;
+    }
+    .taglist__link {
+      padding: 5px 16px;
       font-weight: 600;
       background-color: var(--color-light-bg);
       color: var(--color-blue);
       border-radius: 10px;
-      border: none;
-      margin-bottom: 14px;
+      text-decoration: none;
     }
-    .tag:hover {
+    .taglist__link:hover {
       background-color: #cfd7ff;
     }
-    .tag--active {
+    .taglist__link--active {
       background-color: var(--color-blue);
       color: var(--color-white);
     }
@@ -44,13 +48,25 @@
 
   <div class="container">
     <div class="logo"></div>
-    <div class="card">
-      <button class="tag">All</button>
-      <button class="tag">UX</button>
-      <button class="tag">UI</button>
-      <button class="tag">Engancement</button>
-      <button class="tag">Feature</button>
-      <button class="tag">Bug</button>
+    <div class="taglist card">
+      <li class="taglist__item">
+        <a class="taglist__link" href="#">All</a>
+      </li>
+      <li class="taglist__item">
+        <a class="taglist__link" href="#">UI</a>
+      </li>
+      <li class="taglist__item">
+        <a class="taglist__link" href="#">UX</a>
+      </li>
+      <li class="taglist__item">
+        <a class="taglist__link" href="#">Enhancement</a>
+      </li>
+      <li class="taglist__item">
+        <a class="taglist__link" href="#">Bug</a>
+      </li>
+      <li class="taglist__item">
+        <a class="taglist__link" href="#">Feature</a>
+      </li>
     </div>
     <div class="roadmap-widget"></div>
   </div>
