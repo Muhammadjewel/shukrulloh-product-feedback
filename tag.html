@@ -16,14 +16,12 @@
       background-color: #fff;
     }
     .taglist {
-      width: 225px;
+      display: flex;
+      flex-wrap: wrap;
       list-style: none;
-      padding: 24px;
       background-color: #fff;
-      box-sizing: border-box;
     }
     .taglist__item {
-      display: inline-block;
       margin-right: 3px;
       margin-bottom: 20px;
     }
@@ -48,25 +46,27 @@
 
   <div class="container">
     <div class="logo"></div>
-    <div class="taglist card">
-      <li class="taglist__item">
-        <a class="taglist__link" href="#">All</a>
-      </li>
-      <li class="taglist__item">
-        <a class="taglist__link" href="#">UI</a>
-      </li>
-      <li class="taglist__item">
-        <a class="taglist__link" href="#">UX</a>
-      </li>
-      <li class="taglist__item">
-        <a class="taglist__link" href="#">Enhancement</a>
-      </li>
-      <li class="taglist__item">
-        <a class="taglist__link" href="#">Bug</a>
-      </li>
-      <li class="taglist__item">
-        <a class="taglist__link" href="#">Feature</a>
-      </li>
+    <div class="card">
+      <div class="taglist">
+        <li class="taglist__item">
+          <a class="taglist__link" href="#">All</a>
+        </li>
+        <li class="taglist__item">
+          <a class="taglist__link" href="#">UI</a>
+        </li>
+        <li class="taglist__item">
+          <a class="taglist__link" href="#">UX</a>
+        </li>
+        <li class="taglist__item">
+          <a class="taglist__link" href="#">Enhancement</a>
+        </li>
+        <li class="taglist__item">
+          <a class="taglist__link" href="#">Bug</a>
+        </li>
+        <li class="taglist__item">
+          <a class="taglist__link" href="#">Feature</a>
+        </li>
+      </div>
     </div>
     <div class="roadmap-widget"></div>
   </div>
