@@ -4,15 +4,214 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Feedback</title>
+  <title>Card Feedback</title>
 
   <!-- Stylesheets -->
+  <style>
+    .card {
+      padding: 24px;
+      border-radius: 10px;
+      background-color: #fff;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 17px;
+      border: none;
+      border-radius: 10px;
+      background-color: var(--color-purple);
+      color: var(--color-white);
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: var(--color-lightpurple);
+    }
+    .upvote-btn {
+      display: inline;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      background-color: var(--color-light-bg);
+      color: var(--color-text-dark);
+    }
+    .upvote-btn:hover {
+      background-color: #cfd7ff;
+      cursor: pointer;
+    }
+    .upvote-btn__inner {
+      display: flex;
+      align-items: center;
+      padding: 6px 14px;
+    }
+    .upvote-btn--active {
+      background-color: var(--color-blue);
+      color: var(--color-white);
+    }
+    .upvote-btn__icon {
+      margin-right: 10px;
+      color: var(--color-blue);
+    }
+    .feedback:not(last-child) {
+      margin-bottom: 16px;
+    }
+    .feedback__content {
+      display: block;
+      margin-bottom: 16px;
+    }
+    .feedback__title {
+      margin-top: 0;
+      color: var(--color-text-dark);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .feedback__title:hover {
+      color: var(--color-blue);
+    }
+    .feedback__upvote-btn--wrapper {
+      display: inline;
+    }
+    .feedback__category--btn {
+      padding: 6px 17px;
+      background-color: var(--color-light-bg);
+      text-decoration: none;
+      color: var(--color-blue);
+      font-weight: 600;
+    }
+    .feedback__category--btn:hover {
+      background-color: #cfd7ff;
+    }
+    .feedback__category--active {
+      background-color: var(--color-blue);
+      color: var(--color-white);
+    }
+    .feedback__comment {
+      display: inline;
+      float: right;
+    }
+    .feedback__comment--icon {
+      margin-right: 4px;
+    }
+    .feedback__comment--value {
+      font-weight: 600;
+      color: var(--color-text-dark);
+    }
+    .empty-feedback {
+      display: none;
+      text-align: center;
+      padding: 76px 24px;
+    }
+    .show-card {
+      display: block;
+    }
+    
+    @media only screen and (min-width: 768px) {
+      .upvote-btn__inner {
+        flex-direction: column;
+      }
+      .upvote-btn__icon {
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
+      .empty-feedback {
+          padding: 110px 140px;
+        }
+      .feedback {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 28px 32px;
+      }
+      .feedback__content {
+        margin-bottom: 0;
+    }
+      .feedback__upvote-btn--wrapper {
+        order: -1;
+        margin-bottom: auto;
+      }
+    }
+    @media only screen and (min-width: 1240px) {
+      .empty-feedback {
+        padding: 110px 205px;
+      }
+    }
+  </style>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="page__body">
 
-  
+  <div class="container">
+    <div class="card empty-feedback">
+      <img class="empty-feedback__icon" src="img/empty-feedback-icon.svg" alt="">
+      <h3 class="empty-feedback__title">There is no feedback yet</h3>
+      <p>Got a suggestion? Found a bug that needs to be squashed? We love hearing about new ideas to improve our app.</p>
+      <button class="btn">+ Add Feedback</button>
+    </div>
+    <div class="feedback card">
+      <div class="feedback__content">
+        <a href="#" class="feedback__title">Add a dark theme option</a>
+        <p>It would help people with light sensitivities and who prefer dark mode.</p>
+        <a class="btn feedback__category--btn" href="#">Enhancement</a>
+      </div>
+      <div class="feedback__upvote-btn--wrapper">
+        <button class="upvote-btn" href="index.html">
+          <span class="upvote-btn__inner">
+            <svg class="upvote-btn__icon" width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 6L4 2L8 6" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span class="upvote-btn__text">112</span>
+          </span>
+        </button>
+      </div>
+      <div class="feedback__comment">
+        <span class="feedback__comment--icon"><img src="img/message-icon.svg" alt=""></span>
+        <span class="feedback__comment--value">4</span>
+      </div>
+    </div>
+    <div class="feedback card">
+      <div class="feedback__content">
+        <a href="#" class="feedback__title">Add a dark theme option</a>
+        <p>It would help people with light sensitivities and who prefer dark mode.</p>
+        <a class="btn feedback__category--btn" href="#">Bug</a>
+      </div>
+      <div class="feedback__upvote-btn--wrapper">
+        <button class="upvote-btn" href="index.html">
+          <span class="upvote-btn__inner">
+            <svg class="upvote-btn__icon" width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 6L4 2L8 6" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span class="upvote-btn__text">112</span>
+          </span>
+        </button>
+      </div>
+      <div class="feedback__comment">
+        <span class="feedback__comment--icon"><img src="img/message-icon.svg" alt=""></span>
+        <span class="feedback__comment--value">4</span>
+      </div>
+    </div>
+    <div class="feedback card">
+      <div class="feedback__content">
+        <a href="#" class="feedback__title">Add a dark theme option</a>
+        <p>It would help people with light sensitivities and who prefer dark mode.</p>
+        <a class="btn feedback__category--btn" href="#">Feature</a>
+      </div>
+      <div class="feedback__upvote-btn--wrapper">
+        <button class="upvote-btn" href="index.html">
+          <span class="upvote-btn__inner">
+            <svg class="upvote-btn__icon" width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 6L4 2L8 6" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span class="upvote-btn__text">112</span>
+          </span>
+        </button>
+      </div>
+      <div class="feedback__comment">
+        <span class="feedback__comment--icon"><img src="img/message-icon.svg" alt=""></span>
+        <span class="feedback__comment--value">4</span>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
