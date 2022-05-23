@@ -111,6 +111,37 @@
       font-weight: 600;
       color: var(--color-text-dark);
     }
+    .btn {
+      display: inline-block;
+      padding: 10px 17px;
+      border: none;
+      border-radius: 10px;
+      background-color: var(--color-purple);
+      color: var(--color-white);
+      text-align: center;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .btn:hover {
+      background-color: var(--color-lightpurple);
+    }
+    .feedback__empty-state {
+      display: none;
+      text-align: center;
+      padding: 76px 24px;
+    }
+    .feedback__empty-state__title {
+      margin-top: 40px;
+      margin-bottom: 14px;
+      color: var(--color-text-dark);
+    }
+    .feedback__empty-state__text {
+      margin: 0;
+      margin-bottom: 24px;
+    }
+    .show-card {
+      display: block;
+    }
     @media only screen and (min-width: 768px) {
       .upvote-btn__inner {
         flex-direction: column;
@@ -133,6 +164,9 @@
         align-self: start;
         padding-right: 40px;
       }
+      .feedback__empty-state {
+          padding: 110px 140px;
+        }
     }
     @media only screen and (min-width: 1200px) {
       .feedback__item:not(last-child) {
@@ -144,73 +178,91 @@
 <body class="page__body">
 
   <div class="container">
-    <ul class="feedback__list">
-      <div class="feedback__item card">
-        <div class="feedback__content">
-          <h3 class="feedback__title"><a class="feedback__link" href="#" >Add tags for solutions</a></h3>
-          <p class="feedback__text">Easier to search for solutions based on a specific stack.</p>
-          <a class="taglist__link feedback__category-btn" href="#">Enhancement</a>
+    <div class="feedback">
+      <div class="feedback__inner">
+        <div class="card feedback__empty-state">
+          <img class="feedback__empty-state__icon" src="img/empty-card-icon.svg" alt="">
+          <h3 class="feedback__empty-state__title">There is no feedback yet</h3>
+          <p class="feedback__empty-state__text">Got a suggestion? Found a bug that needs to be squashed? We love hearing about new ideas to improve our app.</p>
+          <button class="btn">+ Add Feedback</button>
         </div>
-        <div class="feedback__upvote-btn--wrapper">
-          <button class="upvote-btn" href="index.html">
-            <span class="upvote-btn__inner">
-              <svg class="upvote-btn__icon" width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 6L4 2L8 6" stroke="currentColor" stroke-width="2"/>
-              </svg>
-              <span class="upvote-btn__text">112</span>
-            </span>
-          </button>
-        </div>
-        <div class="feedback__comment">
-          <img class="feedback__comment--icon" src="img/message-icon.svg">
-          <span class="feedback__comment--value">4</span>
-        </div>
+        <ul class="feedback__list">
+          <div class="feedback__item card">
+            <div class="feedback__content">
+              <h3 class="feedback__title"><a class="feedback__link" href="#" >Add tags for solutions</a></h3>
+              <p class="feedback__text">Easier to search for solutions based on a specific stack.</p>
+              <a class="taglist__link feedback__category-btn" href="#">Enhancement</a>
+            </div>
+            <div class="feedback__upvote-btn--wrapper">
+              <button class="upvote-btn" href="index.html">
+                <span class="upvote-btn__inner">
+                  <svg class="upvote-btn__icon" width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 6L4 2L8 6" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  <span class="upvote-btn__text">112</span>
+                </span>
+              </button>
+            </div>
+            <div class="feedback__comment">
+              <img class="feedback__comment--icon" src="img/message-icon.svg">
+              <span class="feedback__comment--value">4</span>
+            </div>
+          </div>
+          <div class="feedback__item card">
+            <div class="feedback__content">
+              <h3 class="feedback__title"><a class="feedback__link" href="#" >Add a dark theme option</a></h3>
+              <p class="feedback__text">It would help people with light sensitivities and who prefer dark mode.</p>
+              <a class="taglist__link feedback__category-btn" href="#">Enhancement</a>
+            </div>
+            <div class="feedback__upvote-btn--wrapper">
+              <button class="upvote-btn" href="index.html">
+                <span class="upvote-btn__inner">
+                  <svg class="upvote-btn__icon" width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 6L4 2L8 6" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  <span class="upvote-btn__text">112</span>
+                </span>
+              </button>
+            </div>
+            <div class="feedback__comment">
+              <img class="feedback__comment--icon" src="img/message-icon.svg">
+              <span class="feedback__comment--value">4</span>
+            </div>
+          </div>
+          <div class="feedback__item card">
+            <div class="feedback__content">
+              <h3 class="feedback__title"><a class="feedback__link" href="#" >Add a dark theme option</a></h3>
+              <p class="feedback__text">It would help people with light sensitivities and who prefer dark mode.</p>
+              <a class="taglist__link feedback__category-btn" href="#">Enhancement</a>
+            </div>
+            <div class="feedback__upvote-btn--wrapper">
+              <button class="upvote-btn" href="index.html">
+                <span class="upvote-btn__inner">
+                  <svg class="upvote-btn__icon" width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 6L4 2L8 6" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  <span class="upvote-btn__text">112</span>
+                </span>
+              </button>
+            </div>
+            <div class="feedback__comment">
+              <img class="feedback__comment--icon" src="img/message-icon.svg">
+              <span class="feedback__comment--value">4</span>
+            </div>
+          </div>
+        </ul>
       </div>
-      <div class="feedback__item card">
-        <div class="feedback__content">
-          <h3 class="feedback__title"><a class="feedback__link" href="#" >Add a dark theme option</a></h3>
-          <p class="feedback__text">It would help people with light sensitivities and who prefer dark mode.</p>
-          <a class="taglist__link feedback__category-btn" href="#">Enhancement</a>
-        </div>
-        <div class="feedback__upvote-btn--wrapper">
-          <button class="upvote-btn" href="index.html">
-            <span class="upvote-btn__inner">
-              <svg class="upvote-btn__icon" width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 6L4 2L8 6" stroke="currentColor" stroke-width="2"/>
-              </svg>
-              <span class="upvote-btn__text">112</span>
-            </span>
-          </button>
-        </div>
-        <div class="feedback__comment">
-          <img class="feedback__comment--icon" src="img/message-icon.svg">
-          <span class="feedback__comment--value">4</span>
-        </div>
-      </div>
-      <div class="feedback__item card">
-        <div class="feedback__content">
-          <h3 class="feedback__title"><a class="feedback__link" href="#" >Add a dark theme option</a></h3>
-          <p class="feedback__text">It would help people with light sensitivities and who prefer dark mode.</p>
-          <a class="taglist__link feedback__category-btn" href="#">Enhancement</a>
-        </div>
-        <div class="feedback__upvote-btn--wrapper">
-          <button class="upvote-btn" href="index.html">
-            <span class="upvote-btn__inner">
-              <svg class="upvote-btn__icon" width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 6L4 2L8 6" stroke="currentColor" stroke-width="2"/>
-              </svg>
-              <span class="upvote-btn__text">112</span>
-            </span>
-          </button>
-        </div>
-        <div class="feedback__comment">
-          <img class="feedback__comment--icon" src="img/message-icon.svg">
-          <span class="feedback__comment--value">4</span>
-        </div>
-      </div>
-    </ul>
+    </div>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js">
+    const feedbackItem = document.querySelectorAll('.feedback__item');
+    const emptyFeedbackCard = document.querySelector('.feedback__empty-state');
+
+    if(feedbackItem.length <= 0) {
+        emptyFeedbackCard.classList.add('show-card');
+        console.log('hi')
+    }
+  </script>
 </body>
 </html>
