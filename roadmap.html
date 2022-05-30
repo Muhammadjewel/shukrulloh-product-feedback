@@ -10,9 +10,80 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
+
+  <style>
+    .roadmap-widget__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .roadmap-widget__title {
+      color: var(--color-text-dark);
+      flex-grow: 1;
+      margin: 0;
+      margin-right: 24px;
+    }
+    .roadmap-widget__link {
+      color: var(--color-blue);
+    }
+    .roadmap-widget__list {
+      margin: 0;
+    }
+    .roadmap-widget__item{
+      display: flex;
+      align-items: center;
+    }
+    .roadmap-widget__item:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    .roadmap-widget__item::before {
+      flex-shrink: 0;
+      width: 8px;
+      height: 8px;
+      margin-right: 16px;
+      border-radius: 50%; 
+      content: "";
+    }
+    .roadmap-widget__item--planned::before {
+      background-color: var(--color-orange);
+    }
+    .roadmap-widget__item--in-progress::before {
+      background-color: var(--color-purple);
+    }
+    .roadmap-widget__item--live::before {
+      background-color: var(--color-light-blue);
+    }
+    .roadmap-widget__number {
+      font-weight: 700;
+      text-align: right;
+    }
+  </style>
 <body class="page__body page__body--roadmap">
 
-
+    <div class="container">
+      <div class="roadmap-widget card">
+        <div class="roadmap-widget__header">
+          <h3 class="roadmap-widget__title">Roadmap</h3>
+          <a class="roadmap-widget__link" href="roadmap.html">View</a>
+        </div>
+        <dl class="roadmap-widget__list">
+          <div class="roadmap-widget__item roadmap-widget__item--planned">
+            <dt class="roadmap-widget__title">Planned</dt>
+            <dd class="roadmap-widget__number">3</dd>
+          </div>
+          <div class="roadmap-widget__item roadmap-widget__item--in-progress">
+            <dt class="roadmap-widget__title">In Progres</dt>
+            <dd class="roadmap-widget__number">2</dd>
+          </div>
+          <div class="roadmap-widget__item roadmap-widget__item--live">
+            <dt class="roadmap-widget__title">Live</dt>
+            <dd class="roadmap-widget__number">1</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
 
   <script src="js/main.js"></script>
 </body>
