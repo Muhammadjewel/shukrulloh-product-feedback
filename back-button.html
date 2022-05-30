@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Feedback</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+      
+
+    .back-btn {
+        color: var(--color-text-dark);
+        font-size: 14px;
+        text-decoration: none;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+    .back-btn--white {
+        color: #fff;
+    }
+    .back-btn__inner {
+        display: flex;
+        align-items: center;
+    }
+    .back-btn__icon {
+        margin-right: 10px;
+    }
+    .back-btn:hover .back-btn__text {
+        text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body class="page__body--feedback-form">
+
+    <div class="from-header">
+        <a class="back-btn" href="index.html">
+            <span class="back-btn__inner">
+                <svg class="back-btn__icon" width="5" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 9 0 5l4-4" stroke="#4661E6" stroke-width="2"/></svg>
+                <span class="back-btn__text">Go back</span>
+            </span>
+        </a>
+        <div style="background-color: #222; padding: 20px;">
+            <a class="back-btn back-btn--white" href="index.html">
+                <span class="back-btn__inner">
+                    <img class="back-btn__icon" src="img/back-btn-icon-white.svg">
+                    <span class="back-btn__text">Go back</span>
+                </span>
+            </a>
+        </div>
+
+    </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
