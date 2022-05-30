@@ -30,16 +30,19 @@
       background-color: var(--color-lightpurple);
     }
     .empty-feedback {
-        text-align: center;
         padding: 76px 24px;
+        text-align: center;
+    }
+    .empty-feedback__icon {
+        margin-bottom: 40px; 
     }
     .empty-feedback__title {
-        margin-top: 40px;
+        margin-top: 0;
         margin-bottom: 14px;
         color: var(--color-text-dark);
     }
     .empty-feedback__text {
-        margin: 0;
+        margin-top: 0;
         margin-bottom: 24px;
     }
     @media only screen and (min-width: 768px) {
@@ -58,10 +61,10 @@
 
     <div class="container">
         <div class="card empty-feedback">
-            <img class="empty-feedback__icon" src="img/empty-card-icon.svg" alt="">
+            <img class="empty-feedback__icon" src="img/empty-card-icon.svg" alt="" width="102" height="108" aria-hidden="true">
             <h3 class="empty-feedback__title">There is no feedback yet</h3>
             <p class="empty-feedback__text">Got a suggestion? Found a bug that needs to be squashed? We love hearing about new ideas to improve our app.</p>
-            <button class="btn">+ Add Feedback</button>
+            <button class="btn" type="button">+ Add Feedback</button>
         </div>
     </div>
 
