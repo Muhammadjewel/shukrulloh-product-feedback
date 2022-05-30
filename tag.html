@@ -10,25 +10,51 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    .tag {
-      display: inline-block;
-      padding: 5px 16px 6px;
-      font-weight: 600;
-      background-color: var(--color-light-bg);
-      color: var(--color-blue);
+    .card {
+      padding: 24px;
+      border-radius: 10px;
+      background-color: #fff;
     }
-    .tag:hover {
-      background-color: #cfd7ff;
+    .taglist {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      background-color: #fff;
     }
-    .tag--active {
-      background-color: var(--color-blue);
-      color: var(--color-white);
+    .taglist__item {
+      margin-right: 3px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body class="page__body">
 
-  <button class="tag">Engancement</button>
+  <div class="container">
+    <div class="logo"></div>
+    <div class="card">
+      <div class="taglist">
+        <li class="taglist__item">
+          <a class="tag" href="#">All</a>
+        </li>
+        <li class="taglist__item">
+          <a class="tag" href="#">UI</a>
+        </li>
+        <li class="taglist__item">
+          <a class="tag" href="#">UX</a>
+        </li>
+        <li class="taglist__item">
+          <a class="tag" href="#">Enhancement</a>
+        </li>
+        <li class="taglist__item">
+          <a class="tag" href="#">Bug</a>
+        </li>
+        <li class="taglist__item">
+          <a class="tag" href="#">Feature</a>
+        </li>
+      </div>
+    </div>
+    <div class="roadmap-widget"></div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
