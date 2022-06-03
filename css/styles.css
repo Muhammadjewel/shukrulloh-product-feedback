@@ -394,6 +394,103 @@ select:-webkit-autofill:focus {
 }
 
 
+/* FEEDBACKS */
+.feedbacks__inner {
+  padding-top: 32px;
+  padding-bottom: 56px;
+}
+
+.feedbacks__empty-card {
+  display: none;
+}
+
+.feedbacks--empty .feedbacks__empty-card {
+  display: block;
+}
+
+.feedbacks__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.feedbacks--empty .feedbacks__list {
+  display: none;
+}
+
+.feedbacks__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.feedback-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.feedback-card__content {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.feedback-card__comment {
+  display: flex;
+  align-items: center;
+}
+
+.feedback-card__title {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.feedback-card__link {
+  color: var(--color-text-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.feedback-card__link:hover {
+  color: var(--color-blue);
+}
+
+.feedback-card__text {
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.feedback-card__upvote-btn-wrapper {
+  flex-grow: 1;
+}
+
+.feedback-card__category-btn {
+  padding: 6px 17px;
+  background-color: var(--color-light-bg);
+  text-decoration: none;
+  color: var(--color-blue);
+  font-weight: 600;
+}
+
+.feedback-card__category-btn:hover {
+  background-color: #cfd7ff;
+}
+
+.feedback-card__category--active {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.feedback-card__comment-icon {
+  margin-right: 4px;
+  width: 18px;
+  height: 16px;
+}
+
+.feedback-card__comment-value {
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -426,6 +523,23 @@ only screen and (                min-resolution: 2dppx) {
     margin-bottom: 8px;
   }
 
+  .feedback-card {
+    padding: 28px 32px;
+    flex-wrap: nowrap;
+  }
+
+  .feedback-card__content {
+    margin-bottom: 0;
+    flex-grow: 1;
+    margin-right: 40px;
+  }
+
+  .feedback-card__upvote-btn-wrapper {
+    order: -1;
+    align-self: start;
+    margin-right: 40px;
+  }
+
   .empty-feedback {
     padding: 110px 140px;
   }
@@ -446,6 +560,19 @@ only screen and (                min-resolution: 2dppx) {
 
   .page__body--roadmap {
     padding-top: 78px;
+  }
+
+  .site-header-feedbacks-wrapper {
+    display: flex;
+  }
+
+  .site-header-feedbacks-wrapper__site-header {
+    width: 255px;
+    margin-right: 30px;
+  }
+
+  .site-header-feedbacks-wrapper__feedbacks {
+    width: 825px;
   }
 
   .empty-feedback {
