@@ -23,7 +23,24 @@
 
         <!-- FEEDBACKS -->
         <div class="site-header-feedbacks-wrapper__feedbacks feedbacks feedbacks--empty">
-          <div class="feedbacks__actions">Qora fonli</div>
+          <div class="feedbacks__actions">
+            <div class="feedbacks__suggestions-count-wrapper">
+              <img class="feedbacks__suggestions-icon" src="img/bulb.svg" alt="" aria-hidden="true" width="23" height="24">
+              <div class="feedbacks__suggestions-count">6 Suggestions</div>
+            </div>
+
+            <div class="feedbacks__sorting-wrapper">
+              <label class="feedbacks__sorting-label" for="feedbacks-sort-select">Sort by :</label>
+              <select class="feedbacks__sorting-select" name="sort" id="feedbacks-sort-select">
+                <option>Most Upvotes</option>
+                <option>Least Upvotes</option>
+                <option>Most Comments</option>
+                <option>Least Comments</option>
+              </select>
+            </div>
+
+            <a class="btn" href="#">+ Add Feedback</a>
+          </div>
 
           <div class="feedbacks__inner">
             <div class="feedbacks__empty-card">
