@@ -8,7 +8,6 @@
   --color-white: #fff;
   --color-lightpurple: #C75AF6;
 
-
   --color-body-bg: #f7f8fd;
   --color-light-bg: #f2f4ff;
   --color-text: #647196;
@@ -86,13 +85,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 a {
   text-decoration: none;
   color: var(--clr-primary);
 }
-
-
-
 
 /* AUTOFILL-STYLES */
 /*input:-webkit-autofill,
@@ -196,6 +193,9 @@ select:-webkit-autofill:focus {
 .btn--primary:hover {
   background-color: var(--color-light-blue);
 }
+
+
+/* UPVOTE-BTN */
 .upvote-btn {
   border: none;
   border-radius: 10px;
@@ -205,25 +205,33 @@ select:-webkit-autofill:focus {
   padding: 0;
   cursor: pointer;
 }
+
 .upvote-btn:hover {
   background-color: #cfd7ff;
 }
+
 .upvote-btn__inner {
   display: flex;
   align-items: center;
   padding: 6px 14px;
 }
+
 .upvote-btn--active {
   background-color: var(--color-blue);
   color: var(--color-white);
 }
+
 .upvote-btn__icon {
   margin-right: 10px;
   color: var(--color-blue);
 }
+
 .upvote-btn--active .upvote-btn__icon {
   color: var(--color-white);
 }
+
+
+/* TAG */
 .tag {
   display: inline-block;
   padding: 5px 16px;
@@ -232,13 +240,32 @@ select:-webkit-autofill:focus {
   background-color: var(--color-light-bg);
   color: var(--color-blue);
 }
+
 .tag:hover {
   background-color: #cfd7ff;
 }
+
 .tag--active {
   background-color: var(--color-blue);
   color: var(--color-white);
 }
+
+
+/* TAGLIST */
+.taglist {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  background-color: #fff;
+}
+
+.taglist__item {
+  margin-right: 8px;
+  margin-bottom: 14px;
+}
+
+
+/* BACK-BTN */
 .back-btn {
   color: var(--color-text-dark);
   font-size: 14px;
@@ -246,19 +273,24 @@ select:-webkit-autofill:focus {
   font-weight: 700;
   text-transform: capitalize;
 }
+
 .back-btn--white {
   color: #fff;
 }
+
 .back-btn__inner {
   display: flex;
   align-items: center;
 }
+
 .back-btn__icon {
   margin-right: 10px;
 }
+
 .back-btn:hover .back-btn__text {
   text-decoration: underline;
 }
+
 
 /* CARD */
 .card {
@@ -266,89 +298,90 @@ select:-webkit-autofill:focus {
   border-radius: 10px;
   background-color: #fff;
 }
+
 .card--narrow-top {
   padding-top: 20px;
 }
+
 .card--feedback-form {
   padding-top: 44px;
 }
 
 /* EMPTYCARD */
-
 .empty-feedback {
   padding: 76px 24px;
   text-align: center;
 }
+
 .empty-feedback__icon {
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
 }
+
 .empty-feedback__title {
   margin-top: 0;
   margin-bottom: 14px;
   color: var(--color-text-dark);
 }
+
 .empty-feedback__text {
   margin-top: 0;
   margin-bottom: 24px;
 }
 
-/* TAGLIST */
-
-.taglist {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  background-color: #fff;
-}
-.taglist__item {
-  margin-right: 8px;
-  margin-bottom: 14px;
-}
 
 /* ROADMAP-WIDGET */
-
 .roadmap-widget__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
 }
+
 .roadmap-widget__title {
   color: var(--color-text-dark);
   flex-grow: 1;
   margin: 0;
   margin-right: 24px;
 }
+
 .roadmap-widget__link {
   color: var(--color-blue);
 }
+
 .roadmap-widget__list {
   margin: 0;
 }
+
 .roadmap-widget__item{
   display: flex;
   align-items: center;
 }
+
 .roadmap-widget__item:not(:last-child) {
   margin-bottom: 8px;
 }
+
 .roadmap-widget__item::before {
   flex-shrink: 0;
   width: 8px;
   height: 8px;
   margin-right: 16px;
-  border-radius: 50%; 
+  border-radius: 50%;
   content: "";
 }
+
 .roadmap-widget__item--planned::before {
   background-color: var(--color-orange);
 }
+
 .roadmap-widget__item--in-progress::before {
   background-color: var(--color-purple);
 }
+
 .roadmap-widget__item--live::before {
   background-color: var(--color-light-blue);
 }
+
 .roadmap-widget__number {
   font-weight: 700;
   text-align: right;
@@ -379,16 +412,20 @@ only screen and (                min-resolution: 2dppx) {
   .page__body--roadmap {
     padding-top: 56px;
   }
+
   .btn {
     padding: 12px 24px;
   }
+
   .upvote-btn__inner {
     flex-direction: column;
   }
+
   .upvote-btn__icon {
     margin-right: 0;
     margin-bottom: 8px;
   }
+
   .empty-feedback {
     padding: 110px 140px;
   }
@@ -410,7 +447,8 @@ only screen and (                min-resolution: 2dppx) {
   .page__body--roadmap {
     padding-top: 78px;
   }
+
   .empty-feedback {
     padding: 110px 205px;
-}
+  }
 }
