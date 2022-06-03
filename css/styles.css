@@ -354,6 +354,13 @@ select:-webkit-autofill:focus {
   text-align: right;
 }
 
+
+/* MAIN-CONTENT */
+.main-content {
+  flex-grow: 1;
+}
+
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
