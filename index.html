@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="page__body">
+<body class="page__body ">
 
 
   <main class="main-content">
@@ -23,54 +23,50 @@
               <h1 class="site-header__logo">Frontend Mentor</h1>
               <p class="site-header__logo-info">Fedback Board</p>
             </div>
-            <button type="button" class="site-header__sidebar"><svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="#fff"><path d="M0 0h20v3H0zM0 7h20v3H0zM0 14h20v3H0z"/></g></svg></button>
-            <button type="button" class="site-header__sidebar--close"><svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 6.379 2.99.369.867 2.488l6.01 6.01-6.01 6.011 2.121 2.122L9 10.622l6.011 6.01 2.122-2.122-6.01-6.01 6.01-6.01L15.01.367 9 6.378Z" fill="#fff"/></svg></button>
+            <button type="button" class="sidebar-open-btn">
+              <svg class="sidebar-menu-btn" width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="#fff"><path d="M0 0h20v3H0zM0 7h20v3H0zM0 14h20v3H0z"/></g></svg>
+              <svg class="sidebar-close-btn" width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 6.379 2.99.369.867 2.488l6.01 6.01-6.01 6.011 2.121 2.122L9 10.622l6.011 6.01 2.122-2.122-6.01-6.01 6.01-6.01L15.01.367 9 6.378Z" fill="#fff"/></svg>
+            </button>
           </div>
-          <div class="site-header__taglist-roadmap-wrapper">
-            <div class="card card--site-header">
-              <div class="roadmap-widget">
-                <div class="roadmap-widget__header">
-                  <h3 class="roadmap-widget__title">Roadmap</h3>
-                  <a class="roadmap-widget__link" href="roadmap.html">View</a>
-                </div>
-                <dl class="roadmap-widget__list">
-                  <div class="roadmap-widget__item roadmap-widget__item--planned">
-                    <dt class="roadmap-widget__title">Planned</dt>
-                    <dd class="roadmap-widget__number">3</dd>
-                  </div>
-                  <div class="roadmap-widget__item roadmap-widget__item--in-progress">
-                    <dt class="roadmap-widget__title">In Progres</dt>
-                    <dd class="roadmap-widget__number">2</dd>
-                  </div>
-                  <div class="roadmap-widget__item roadmap-widget__item--live">
-                    <dt class="roadmap-widget__title">Live</dt>
-                    <dd class="roadmap-widget__number">1</dd>
-                  </div>
-                </dl>
-              </div>    
+          <div class="roadmap-widget">
+            <div class="roadmap-widget__header">
+              <h3 class="roadmap-widget__title">Roadmap</h3>
+              <a class="roadmap-widget__link" href="roadmap.html">View</a>
             </div>
-            <div class="card card--site-header">
-              <div class="taglist">
-                <li class="taglist__item">
-                  <a class="tag" href="#">All</a>
-                </li>
-                <li class="taglist__item">
-                  <a class="tag" href="#">UI</a>
-                </li>
-                <li class="taglist__item">
-                  <a class="tag" href="#">UX</a>
-                </li>
-                <li class="taglist__item">
-                  <a class="tag" href="#">Enhancement</a>
-                </li>
-                <li class="taglist__item">
-                  <a class="tag" href="#">Bug</a>
-                </li>
-                <li class="taglist__item">
-                  <a class="tag" href="#">Feature</a>
-                </li>
+            <dl class="roadmap-widget__list">
+              <div class="roadmap-widget__item roadmap-widget__item--planned">
+                <dt class="roadmap-widget__title">Planned</dt>
+                <dd class="roadmap-widget__number">3</dd>
               </div>
-            </div>
+              <div class="roadmap-widget__item roadmap-widget__item--in-progress">
+                <dt class="roadmap-widget__title">In Progres</dt>
+                <dd class="roadmap-widget__number">2</dd>
+              </div>
+              <div class="roadmap-widget__item roadmap-widget__item--live">
+                <dt class="roadmap-widget__title">Live</dt>
+                <dd class="roadmap-widget__number">1</dd>
+              </div>
+            </dl>
+          </div>    
+          <div class="taglist">
+            <li class="taglist__item">
+              <a class="tag" href="#">All</a>
+            </li>
+            <li class="taglist__item">
+              <a class="tag" href="#">UI</a>
+            </li>
+            <li class="taglist__item">
+              <a class="tag" href="#">UX</a>
+            </li>
+            <li class="taglist__item">
+              <a class="tag" href="#">Enhancement</a>
+            </li>
+            <li class="taglist__item">
+              <a class="tag" href="#">Bug</a>
+            </li>
+            <li class="taglist__item">
+              <a class="tag" href="#">Feature</a>
+            </li>
           </div>
               
         </header>

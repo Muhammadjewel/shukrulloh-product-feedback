@@ -143,7 +143,9 @@ select:-webkit-autofill:focus {
 .page__body--feedback-form {
   padding-top: 34px;
 }
-
+.page__body--sitenav-open {
+  padding-top: 71px;
+}
 
 /* CONTAINER */
 .container {
@@ -243,7 +245,7 @@ select:-webkit-autofill:focus {
 }
 
 .back-btn--white {
-  color: #fff;
+  color: var(--color-white);
 }
 
 .back-btn__inner {
@@ -264,7 +266,7 @@ select:-webkit-autofill:focus {
 .card {
   padding: 24px;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: var(--color-white);
 }
 
 .card--narrow-top {
@@ -275,11 +277,6 @@ select:-webkit-autofill:focus {
   padding-top: 44px;
 }
 
-.card--site-header {
-  margin-bottom: 24px;
-  width: 223px;
-  height: 178px;
-}
 
 /* EMPTYCARD */
 .empty-feedback {
@@ -303,23 +300,25 @@ select:-webkit-autofill:focus {
 }
 
 
-
-
-
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
 }
 
 /* SITE-HEADER */
+.site-header {
+  position: relative;
+}
 
 .site-header__logo-wrapper {
+  position: relative;
   background: var(--color-side-logo-bg);
   display: flex;
   align-items: center;
   padding: 15px 24px;
   margin-right: -24px;
   margin-left: -24px;
+  z-index: 50;
 }
 
 .site-header__logo-inner {
@@ -337,65 +336,84 @@ select:-webkit-autofill:focus {
   margin: 0;
 }
 
-.site-header__sidebar {
-  background-color: transparent;
-  border: none;
-  width: 17px;
-  height: 20px;
-}
-
-.sidebar-open .site-header-feedbacks-wrapper__feedbacks::after {
-  position: absolute;
+.sidebar-open {
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  margin-right: -24px;
-  margin-left: -24px;
-  background-color: #333;
-  opacity: 0.5;
-  z-index: 2;
+  width: 100%;
+}
+
+.sidebar-open::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.4);
   content: "";
 }
 
-
-.site-header__taglist-roadmap-wrapper {
-  background-color: var(--color-light-bg);
+.sidebar-open::after {
   position: fixed;
+  top: 0;
   right: 0;
-  padding: 24px;
-  height: 100vh;
-  display: none;
-  z-index: 3;
+  width: 270px;
+  height: 100%;
+  background-color: var(--color-light-bg);
+  content: "";
 }
 
-.sidebar-open .site-header__taglist-roadmap-wrapper {
+.sidebar-open .site-header__logo-wrapper {
+  margin: 0;
+}
+
+.sidebar-open .roadmap-widget {
+  position: relative;
+  margin-left: auto;
   display: block;
+  z-index: 2;
 }
 
-.sidebar-open .site-header__sidebar {
+.sidebar-open .taglist {
+  position: relative;
+  top: 48px;
+  right: 24px;
+  display: flex;
+  margin-left: auto;
+  z-index: 2;
+}
+
+.sidebar-open .sidebar-menu-btn {
   display: none;
 }
 
-.site-header__sidebar--close {
+.sidebar-close-btn {
   display: none;
 }
 
-.sidebar-open  .site-header__sidebar--close {
+.sidebar-open  .sidebar-close-btn {
   display: block;
   border: none;
   background: transparent;
 }
 
-.site-header-feedbacks-wrapper__feedbacks {
-  position: relative;
-  z-index: 0;
+.sidebar-open-btn {
+  border: none;
+  background: transparent;
 }
 
-. {
-
-}
 /* ROADMAP-WIDGET */
+
+.roadmap-widget {
+  display: none;
+  background-color: var(--color-white);
+  padding: 24px;
+  top: 24px;
+  right: 24px;
+  width: 223px;
+  height: 178px;
+  border-radius: 10px;
+}
 
 .roadmap-widget__header {
   display: flex;
@@ -477,10 +495,15 @@ select:-webkit-autofill:focus {
 
 /* TAGLIST */
 .taglist {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   list-style: none;
-  background-color: #fff;
+  background-color: var(--color-white);
+  padding: 24px;
+  margin-bottom: 24px;
+  width: 223px;
+  height: 178px;
+  border-radius: 10px;
 }
 
 .taglist__item {
@@ -640,6 +663,9 @@ only screen and (                min-resolution: 2dppx) {
   .page__body--roadmap {
     padding-top: 56px;
   }
+  .page__body--sitenav-open {
+    padding-top: 56px;
+  }
 
   .btn {
     padding: 12px 24px;
@@ -654,18 +680,9 @@ only screen and (                min-resolution: 2dppx) {
     margin-bottom: 8px;
   }
 
-  .card--site-header {
-    width: calc(100% / 2 - 10px);
-  } 
-
-  .card--site-header:first-child {
-    margin-bottom: 0;
-    margin-right: 10px;
-  }
-
   .site-header {
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: space-between;
     margin-bottom: 40px;
   }
 
@@ -687,34 +704,42 @@ only screen and (                min-resolution: 2dppx) {
     font-size: 20px;
   }  
 
-  .site-header__sidebar {
+  .sidebar-open {
+    position: relative;
+  }
+
+  .sidebar-open-btn {
     display: none;
   }
 
-  .site-header__taglist-roadmap-wrapper {
-    flex-grow: 1;
-    display: flex;
-    position: relative;
-    height: auto;
-    padding: 0;
-    background-color: transparent;
+  .roadmap-widget {
+    display: block;
   }
 
-  .sidebar-open .site-header-feedbacks-wrapper__feedbacks::after {
+  .taglist {
+    display: flex;
+  }
+
+  .sidebar-open::after, .sidebar-open::before {
     content: none;
   }
-
+  .sidebar-open .site-header__logo-wrapper {
+    margin-bottom: 24px;
+  }
+  .sidebar-open .roadmap-widget, .sidebar-open .taglist {
+    top: 0;
+    right: 0;
+    margin: 0;
+  }
+  .sidebar-open .roadmap-widget {
+    margin-bottom: 24px;
+  }
   .sidebar-open .site-header__taglist-roadmap-wrapper {
     display: flex;
   }
 
   .sidebar-open .site-header__sidebar--close {
     display: none;
-  }
-
-  .roadmap-widget {
-    margin-bottom: 0;
-    margin-right: 10px;
   }
   
   .feedback-card {
@@ -786,16 +811,6 @@ only screen and (                min-resolution: 2dppx) {
     padding-top: 78px;
   }
 
-  .card--site-header {
-    width: 100%;
-    width: 223px;
-  }
-  
-  .card--site-header:first-child {
-    margin-bottom: 24px;
-    margin-right: 0px;
-  }
-
   .site-header-feedbacks-wrapper {
     display: flex;
   }
@@ -812,8 +827,8 @@ only screen and (                min-resolution: 2dppx) {
     margin-right: 0
   }
 
-  .site-header__taglist-roadmap-wrapper {
-    flex-direction: column;
+  .roadmap-widget {
+    margin-bottom: 24px;
   }
 
   .site-header-feedbacks-wrapper__feedbacks {

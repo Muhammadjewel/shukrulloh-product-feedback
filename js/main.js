@@ -1,16 +1,9 @@
-const sidebarBtn = document.querySelector('.site-header__sidebar');
-const sidebarCloseBtn = document.querySelector('.site-header__sidebar--close');
-const siteWrapper = document.querySelector('.site-header-feedbacks-wrapper');
-
-
-
-sidebarCloseBtn.addEventListener('click', function() {
-	siteWrapper.classList.remove('sidebar-open');
-	console.log('open');
-});
+const sidebarBtn = document.querySelector('.sidebar-open-btn');
+const siteWrapper = document.querySelector('.site-header');
+const siteNav = document.querySelector('.page__body');
 
 
 sidebarBtn.addEventListener('click', function() {
-	siteWrapper.classList.add('sidebar-open');
-	console.log('open');
+	siteWrapper.classList.toggle('sidebar-open');
+	siteNav.classList.toggle('page__body--sitenav-open');
 });
